@@ -10,9 +10,9 @@ namespace MovieTrackingApp.API_and_DB_Calls
         {
             private readonly string _connectionString;
 
-            public DBCalls(IConfiguration configuration)
+            public DBCalls()
             {
-                _connectionString = configuration.GetConnectionString("DefaultConnection");
+                _connectionString = Program.Configuration.GetConnectionString("DefaultConnection");
             }
 
             private byte[] HashPassword(string password)

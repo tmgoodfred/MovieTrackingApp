@@ -10,9 +10,9 @@ namespace MovieTrackingApp.API_Calls
         private readonly HttpClient _httpClient;
         private const string BaseUrl = "https://api.themoviedb.org/3";
 
-        public TMDBApiCall(IConfiguration configuration)
+        public TMDBApiCall()
         {
-            _apiKey = configuration["TMDb:ApiKey"];
+            _apiKey = Program.Configuration["TMDb:ApiKey"];
             _httpClient = new HttpClient();
         }
 
